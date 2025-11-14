@@ -8,24 +8,25 @@ public class DeathTest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Pawn newPawn = pawnToTest.GetComponent<Pawn>();
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            //pawnToTest.death.Die();
+            pawnToTest.death.Die();
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            //pawnToTest.curentHealth
+            pawnToTest.health.TakeDamage(1);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            //pawnToTest.health.Heal(1);
+            pawnToTest.health.Heal(1);
         }
 
     }
