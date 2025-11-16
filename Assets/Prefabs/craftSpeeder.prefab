@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4584569150930409592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822209318570973438}
+  m_Layer: 0
+  m_Name: lookPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &822209318570973438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584569150930409592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4978811483429057321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4797164658648798402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,15 +41,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.80383444
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 10.860001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0525007
+      value: -14.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +85,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 822209318570973438}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
@@ -70,8 +104,13 @@ PrefabInstance:
       addedObject: {fileID: 2083767021689796018}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2552137603357106035}
+      addedObject: {fileID: 8256816463175621651}
   m_SourcePrefab: {fileID: 100100000, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+--- !u!4 &4978811483429057321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+  m_PrefabInstance: {fileID: 4797164658648798402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5644024112006097299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
@@ -89,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdc1824d18df66448499eff5c881153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShiphealthComponent
-  currentHealth: 3
+  currentHealth: 5
   maxHealth: 10
 --- !u!114 &-9019190499770193810
 MonoBehaviour:
@@ -105,6 +144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipPawn
   health: {fileID: 0}
   death: {fileID: 0}
+  rigidBody: {fileID: 0}
+  moveSpeed: 800
+  rotateValue: 100
+  pitchValue: 100
+  rollValue: 100
+  launchValue: 1000
 --- !u!114 &-2621700870884767523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,8 +171,8 @@ Rigidbody:
   m_GameObject: {fileID: 5644024112006097299}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 1
+  m_AngularDamping: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -144,8 +189,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2552137603357106035
-CapsuleCollider:
+--- !u!65 &8256816463175621651
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,8 +207,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.05
-  m_Height: 0.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.39999998, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.0275657, y: 0.79999995, z: 2.036917}
+  m_Center: {x: 0.013992816, y: 0.39999998, z: -0.031541467}
