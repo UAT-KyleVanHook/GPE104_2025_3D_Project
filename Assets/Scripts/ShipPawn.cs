@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ShipPawn : Pawn
 {
-    //Rigidbody rigidBody;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +17,9 @@ public class ShipPawn : Pawn
         death = GetComponent<DeathComponent>();
         
         rigidBody = GetComponent<Rigidbody>();
+
+        shootComp = GetComponent<Shooter>();
+
 
     }
 

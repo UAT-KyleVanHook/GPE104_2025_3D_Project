@@ -2,10 +2,11 @@ using UnityEngine;
 
 public abstract class Pawn : MonoBehaviour
 {
-
+    [Header("Components")]
     public HealthComponent health;
     public DeathComponent death;
     public Rigidbody rigidBody;
+    public Shooter shootComp;
 
     [Header("Movement")]
     public float thrustSpeed;

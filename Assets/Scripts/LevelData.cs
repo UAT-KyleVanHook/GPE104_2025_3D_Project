@@ -10,6 +10,10 @@ public class LevelData : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        GameManager.instance.maxX = XBounds;
+        GameManager.instance.maxY = YBounds;
+        GameManager.instance.maxZ = ZBounds;
         
     }
 

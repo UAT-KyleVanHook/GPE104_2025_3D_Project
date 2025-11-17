@@ -89,11 +89,18 @@ public class ShipController : Controller
         }
 
         //raise pawn
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.R))
         {
 
             //Tell pawn to Move rotate right
             pawn.Rise(pawn.launchValue);
+
+        }
+
+        //shoot projectile
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pawn.shootComp.Shoot();
 
         }
 

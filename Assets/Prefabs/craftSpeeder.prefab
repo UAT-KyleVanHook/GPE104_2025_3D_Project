@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4978811483429057321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6149695921012534934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8426040471037332313}
+  m_Layer: 0
+  m_Name: projectileSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8426040471037332313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6149695921012534934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4978811483429057321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4797164658648798402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,6 +120,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 822209318570973438}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8426040471037332313}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
@@ -105,6 +139,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8256816463175621651}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5433010248192818178}
   m_SourcePrefab: {fileID: 100100000, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
 --- !u!4 &4978811483429057321 stripped
 Transform:
@@ -145,9 +182,10 @@ MonoBehaviour:
   health: {fileID: 0}
   death: {fileID: 0}
   rigidBody: {fileID: 0}
-  moveSpeed: 800
+  shootComp: {fileID: 0}
+  thrustSpeed: 500
   rotateValue: 100
-  pitchValue: 100
+  pitchValue: 200
   rollValue: 100
   launchValue: 1000
 --- !u!114 &-2621700870884767523
@@ -210,3 +248,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0275657, y: 0.79999995, z: 2.036917}
   m_Center: {x: 0.013992816, y: 0.39999998, z: -0.031541467}
+--- !u!114 &5433010248192818178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644024112006097299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad531761c9e8d144af97bc32f9bf6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootProjectile
+  projectilePrefab: {fileID: 8787138176886501739, guid: 25c06619d8c87bf46b131058e4ac665a, type: 3}
+  firePoint: {fileID: 8426040471037332313}
