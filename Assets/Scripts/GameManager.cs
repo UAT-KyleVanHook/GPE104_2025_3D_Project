@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(score);
+        //Debug.Log(score);
 
     }
 }

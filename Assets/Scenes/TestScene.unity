@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
-  isInstaKill: 1
+  isInstaKill: 0
   damageDone: 1
   scoreAmount: 0
 --- !u!114 &1141739101
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
-  isInstaKill: 1
+  isInstaKill: 0
   damageDone: 1
   scoreAmount: 1
 --- !u!1 &1152166396
@@ -1467,6 +1467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipController
   pawn: {fileID: 805208661}
+  cam: {fileID: 330585545}
 --- !u!1 &1523235756
 GameObject:
   m_ObjectHideFlags: 0

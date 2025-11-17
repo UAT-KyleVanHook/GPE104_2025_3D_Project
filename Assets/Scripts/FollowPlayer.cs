@@ -40,9 +40,10 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
 
-        decreaseOffset();
+        //is in ShipController now.
+        //decreaseOffset();
 
-        increaseOffset();
+        //increaseOffset();
 
 
         //update the camera's position
@@ -60,9 +61,9 @@ public class FollowPlayer : MonoBehaviour
     {
 
         //decrease offset length, towards ship.
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            if (cameraOffsetZ != offsetMin)
+       // if (Input.GetKeyDown(KeyCode.O))
+        //{
+            if (cameraOffset.z != offsetMin)
             {
                 cameraOffset.z += 1;
                 Debug.Log(cameraOffsetZ);
@@ -72,16 +73,16 @@ public class FollowPlayer : MonoBehaviour
 
             }
 
-        }
+        //}
 
     }
 
     public void increaseOffset()
     {
         //increase the offset length away from ship
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            if (cameraOffsetZ != offsetMax)
+        //if (Input.GetKeyDown(KeyCode.L))
+       // {
+            if (cameraOffset.z != offsetMax)
             {
                 cameraOffset.z += -1;
                 Debug.Log(cameraOffsetZ);
@@ -90,7 +91,7 @@ public class FollowPlayer : MonoBehaviour
 
             }
 
-        }
+       // }
 
     }
 

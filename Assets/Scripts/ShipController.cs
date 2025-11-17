@@ -5,7 +5,8 @@ public class ShipController : Controller
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //cam = GetComponent<Camera>();
+        //cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -102,6 +103,20 @@ public class ShipController : Controller
         {
             pawn.shootComp.Shoot();
 
+        }
+
+        //decrease the camera offset
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+           FollowPlayer camFollow = cam.GetComponent<FollowPlayer>();
+            camFollow.decreaseOffset();
+        }
+
+        //increase the camera offset
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            FollowPlayer camFollow = cam.GetComponent<FollowPlayer>();
+            camFollow.increaseOffset();
         }
 
     }
