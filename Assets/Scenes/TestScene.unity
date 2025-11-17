@@ -788,6 +788,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5433010248192818178, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
+      propertyPath: projectileVFX
+      value: 
+      objectReference: {fileID: 2922343841660499084, guid: 8e30ee7e21ea53f4fb4b7e27e8f83455, type: 3}
     - target: {fileID: 5644024112006097299, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
       propertyPath: m_Name
       value: craftSpeeder
