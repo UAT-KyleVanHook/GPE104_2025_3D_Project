@@ -31,7 +31,7 @@ public class DamageOnOverlap : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
             //get healthComponenet
             HealthComponent otherHealth = other.gameObject.GetComponent<HealthComponent>();

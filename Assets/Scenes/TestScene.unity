@@ -678,9 +678,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 491800704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
   damageDone: 0
   scoreAmount: 0
@@ -796,17 +796,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: craftSpeeder
       objectReference: {fileID: 0}
+    - target: {fileID: 8256816463175621651, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5644024112006097299, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 829855820}
   m_SourcePrefab: {fileID: 100100000, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
 --- !u!114 &805208661 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -9019190499770193810, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
   m_PrefabInstance: {fileID: 625346407}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 829855812}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a9b3f480bd3a5540b054b0e98759cc2, type: 3}
@@ -817,6 +824,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4978811483429057321, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
   m_PrefabInstance: {fileID: 625346407}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &829855812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5644024112006097299, guid: 44ab64b8fe5127344b8664b36365934b, type: 3}
+  m_PrefabInstance: {fileID: 625346407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &829855820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829855812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdac22ed88ff66479d614cefbdd7c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaLimit
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,12 +1011,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 856296458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
   damageDone: 0
   scoreAmount: 0
+--- !u!1 &858213155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858213156}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858213156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858213155}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -100, y: 100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040960249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,11 +1169,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040960249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
-  damageDone: 1
+  damageDone: 0
   scoreAmount: 0
 --- !u!1 &1072675173
 GameObject:
@@ -1165,9 +1220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7ffffde0077cc4dbfead863c0fa8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
-  XBounds: 0
-  YBounds: 0
-  ZBounds: 0
+  MaxXBounds: 100
+  MaxYBounds: 100
+  MaxZBounds: 100
+  MinXBounds: -100
+  MinYBounds: -1
+  MinZBounds: -100
 --- !u!1 &1141739095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1239,6 @@ GameObject:
   - component: {fileID: 1141739098}
   - component: {fileID: 1141739097}
   - component: {fileID: 1141739101}
-  - component: {fileID: 1141739100}
   - component: {fileID: 1141739102}
   - component: {fileID: 1141739103}
   - component: {fileID: 1141739104}
@@ -1284,21 +1341,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141739095}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1141739100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141739095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
-  isInstaKill: 0
-  damageDone: 1
-  scoreAmount: 0
 --- !u!114 &1141739101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,7 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
-  isInstaKill: 0
+  isInstaKill: 1
   damageDone: 1
   scoreAmount: 1
 --- !u!1 &1152166396
@@ -1405,8 +1447,11 @@ MonoBehaviour:
   backgroundMusicClip: {fileID: 0}
   backgroundMusicSource: {fileID: 0}
   maxX: 0
+  minX: 0
   maxY: 0
+  minY: 0
   maxZ: 0
+  minZ: 0
 --- !u!4 &1152166398
 Transform:
   m_ObjectHideFlags: 0
@@ -1589,9 +1634,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1523235756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
   damageDone: 0
   scoreAmount: 0
@@ -1717,9 +1762,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1576525484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
   damageDone: 0
   scoreAmount: 0
@@ -1844,9 +1889,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2048519670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2333b50aa5a3994881885667609db91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f91eb07267fdeb4c8d1423601ff2f59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageOnCollision
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnOverlap
   isInstaKill: 1
   damageDone: 0
   scoreAmount: 0
@@ -1968,3 +2013,4 @@ SceneRoots:
   - {fileID: 1152166398}
   - {fileID: 1521352287781536667}
   - {fileID: 357108323}
+  - {fileID: 858213156}

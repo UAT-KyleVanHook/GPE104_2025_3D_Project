@@ -38,10 +38,13 @@ public class GameManager : MonoBehaviour
     public AudioSource backgroundMusicSource;
 
     //screen warp boundry
-    [Header("Bounding Box")]
+    [Header("Game Bounds")]
     public float maxX;
+    public float minX;
     public float maxY;
+    public float minY;
     public float maxZ;
+    public float minZ;
 
     //checks that the timer hasn't run out.
     //public bool bTimeRanOut = false;
@@ -85,7 +88,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        //Debug.Log(score);
+        Debug.Log(minX);
 
     }
 }

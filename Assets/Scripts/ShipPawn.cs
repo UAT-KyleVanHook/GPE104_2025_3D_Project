@@ -20,6 +20,7 @@ public class ShipPawn : Pawn
 
         shootComp = GetComponent<Shooter>();
 
+        GameManager.instance.playerPawn = this;
 
     }
 
