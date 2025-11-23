@@ -3,13 +3,13 @@ using UnityEngine;
 public abstract class HealthComponent : MonoBehaviour
 {
 
-    public float currentHealth;
-    public float maxHealth;
+    public int currentHealth;
+    public int maxHealth;
 
-    public abstract void TakeDamage(float amount);
+    public abstract void TakeDamage(int amount);
 
     public abstract bool isAlive();
 
-    public abstract void Heal(float amount);
+    public abstract void Heal(int amount);
     public abstract void Die();
 }

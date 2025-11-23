@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     [Header("SoundClips")]
     public AudioClip shootingSound;
     public AudioClip explosionSound;
-    public AudioClip metalSound;
+    public AudioClip pickupSound;
+    public AudioClip shipHurtSounds;
     public AudioClip backgroundMusicClip;
 
     [Header("Audio Sources")]
@@ -67,8 +68,8 @@ public class GameManager : MonoBehaviour
         //damageZones = new List<DamageOnOverlap>();
 
         //backgroundmusic
-        //backgroundMusicSource.clip = backgroundMusicClip;
-        //backgroundMusicSource.Play();
+        backgroundMusicSource.clip = backgroundMusicClip;
+        backgroundMusicSource.Play();
 
 
 
@@ -88,7 +89,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(minX);
+        //Debug.Log(minX);
 
     }
 }

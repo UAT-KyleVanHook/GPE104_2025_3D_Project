@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class ShiphealthComponent : HealthComponent
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,11 +12,13 @@ public class ShiphealthComponent : HealthComponent
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(int amount)
     {
+
+        AudioSource.PlayClipAtPoint(GameManager.instance.shipHurtSounds, transform.position);
 
         currentHealth = currentHealth - amount;
 
@@ -43,7 +46,7 @@ public class ShiphealthComponent : HealthComponent
 
     }
 
-    public override void Heal(float amount)
+    public override void Heal(int amount)
     {
 
         currentHealth = currentHealth + amount;
@@ -64,6 +67,8 @@ public class ShiphealthComponent : HealthComponent
         //check that the object can die
         if (death != null)
         {
+            AudioSource.PlayClipAtPoint(GameManager.instance.shipHurtSounds, transform.position);
+
             death.Die();
         }
     }

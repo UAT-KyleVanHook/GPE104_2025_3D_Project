@@ -23,7 +23,7 @@ public class ObstacleHealthComponent : HealthComponent
 
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(int amount)
     {
 
         currentHealth = currentHealth - amount;
@@ -63,7 +63,7 @@ public class ObstacleHealthComponent : HealthComponent
 
     }
 
-    public override void Heal(float amount)
+    public override void Heal(int amount)
     {
 
         currentHealth = currentHealth + amount;

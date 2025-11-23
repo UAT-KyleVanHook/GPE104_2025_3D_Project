@@ -20,6 +20,7 @@ public class ShipPawn : Pawn
 
         shootComp = GetComponent<Shooter>();
 
+        //TODO:change this when spawning the player later.
         GameManager.instance.playerPawn = this;
 
     }
@@ -28,13 +29,15 @@ public class ShipPawn : Pawn
     void Update()
     {
 
+
+
         // Enable gravity if the object's speed exceeds 3 units
         if (rigidBody.linearVelocity.magnitude > 3)
         {
             rigidBody.useGravity = true;
 
             //set gravity to -4 downward.
-            Physics.gravity = new Vector3(0, -4.0F, 0);
+            Physics.gravity = new Vector3(0, -5.0F, 0);
         }
         else
         {

@@ -142,6 +142,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5433010248192818178}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8859951443940070594}
   m_SourcePrefab: {fileID: 100100000, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
 --- !u!4 &4978811483429057321 stripped
 Transform:
@@ -165,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdc1824d18df66448499eff5c881153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShiphealthComponent
-  currentHealth: 5
+  currentHealth: 10
   maxHealth: 10
 --- !u!114 &-9019190499770193810
 MonoBehaviour:
@@ -210,7 +213,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 1
-  m_AngularDamping: 1
+  m_AngularDamping: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -222,7 +225,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -243,7 +246,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0275657, y: 0.79999995, z: 2.036917}
@@ -260,5 +263,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad531761c9e8d144af97bc32f9bf6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootProjectile
+  projectileVFX: {fileID: 2922343841660499084, guid: 8e30ee7e21ea53f4fb4b7e27e8f83455, type: 3}
   projectilePrefab: {fileID: 8787138176886501739, guid: 25c06619d8c87bf46b131058e4ac665a, type: 3}
   firePoint: {fileID: 8426040471037332313}
+--- !u!114 &8859951443940070594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644024112006097299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdac22ed88ff66479d614cefbdd7c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaLimit

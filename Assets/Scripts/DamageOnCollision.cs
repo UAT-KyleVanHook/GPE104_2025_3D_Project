@@ -3,7 +3,7 @@ using UnityEngine;
 public class DamageOnCollision : MonoBehaviour
 {
     public bool isInstaKill;
-    public float damageDone;
+    public int damageDone;
     public float scoreAmount;
 
 
@@ -25,7 +25,7 @@ public class DamageOnCollision : MonoBehaviour
     void OnDestroy()
     {
         //Remove this DamageOnOverlap from the GameManager's List. It is dead and destroyed. Update the score.
-        //GameManager.instance.score += scoreAmount;
+        GameManager.instance.score += scoreAmount;
         //GameManager.instance.damageZones.Remove(this);
 
 

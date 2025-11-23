@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class ShipController : Controller
 {
+
+    public Camera cam;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 public class DamageOnOverlap : MonoBehaviour
 {
     public bool isInstaKill;
-    public float damageDone;
+    public int damageDone;
     public float scoreAmount;
 
 

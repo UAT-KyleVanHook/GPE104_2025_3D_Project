@@ -41,10 +41,10 @@ public class Projectile : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter(Collider collision)
     {
 
-        HealthComponent otherHealth = other.gameObject.GetComponent<HealthComponent>();
+        HealthComponent otherHealth = collision.gameObject.GetComponent<HealthComponent>();
 
         //check that the collided object has a health component. If true do damage.
         if (otherHealth != null)
@@ -56,4 +56,5 @@ public class Projectile : MonoBehaviour
         Destroy(this.gameObject);
 
     }
+
 }

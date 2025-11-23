@@ -28,7 +28,9 @@ public class ShootProjectile : Shooter
     {
 
 
-        Debug.Log("Shooting Bullet!");
+        //Debug.Log("Shooting Bullet!");
+
+        AudioSource.PlayClipAtPoint(GameManager.instance.shootingSound, transform.position);
 
         GameObject VFXClone = Instantiate(projectileVFX, firePoint);
 
