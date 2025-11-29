@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class MenuController : MonoBehaviour
 {
@@ -9,6 +10,35 @@ public class MenuController : MonoBehaviour
     {
 
         SceneManager.LoadScene("TestScene");
+
+    }
+
+    public void OnMenuClick()
+    {
+
+        SceneManager.LoadScene("MenuScene");
+
+    }
+
+    public void OnCreditsClick()
+    {
+
+        SceneManager.LoadScene("CreditsScene");
+
+    }
+
+    public void OnControlsClick()
+    {
+
+        SceneManager.LoadScene("ControlsScene");
+
+    }
+
+    public void OnResetScoreClick()
+    {
+
+        //set the HighScore in PlayerPrefs to zero
+        PlayerPrefs.SetFloat("HighScore", 0.0f);
 
     }
 

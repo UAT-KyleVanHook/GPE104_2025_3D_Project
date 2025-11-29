@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
 
         UpdateLivesCount();
 
+
     }
     void UpdateScoreText()
     {
@@ -54,4 +55,5 @@ public class UIManager : MonoBehaviour
 
         livesText.text = "Lives x " + currentPlayerLives;
     }
+
 }

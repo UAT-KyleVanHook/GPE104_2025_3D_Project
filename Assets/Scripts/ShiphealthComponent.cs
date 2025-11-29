@@ -61,6 +61,10 @@ public class ShiphealthComponent : HealthComponent
 
     public override void Die()
     {
+
+        //reset health for player respawning for health bar 
+        currentHealth = maxHealth;
+
         //TODO: handle death in the health component
         DeathComponent death = GetComponent<DeathComponent>();
 

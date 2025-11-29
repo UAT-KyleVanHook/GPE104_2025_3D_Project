@@ -76,11 +76,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.860001
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.88
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -132,9 +132,6 @@ PrefabInstance:
       addedObject: {fileID: -9019190499770193810}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2621700870884767523}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2083767021689796018}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
@@ -145,6 +142,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8859951443940070594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 244450682197119595}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5074110628732715408}
   m_SourcePrefab: {fileID: 100100000, guid: 84755e271cfe8554d8e06ba738f61dc1, type: 3}
 --- !u!4 &4978811483429057321 stripped
 Transform:
@@ -191,18 +194,6 @@ MonoBehaviour:
   pitchValue: 200
   rollValue: 100
   launchValue: 1000
---- !u!114 &-2621700870884767523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5644024112006097299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4002a6d1ab100a849b426d42ff81aabe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShipDestroyDeathComponent
 --- !u!54 &2083767021689796018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,3 +269,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdac22ed88ff66479d614cefbdd7c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AreaLimit
+--- !u!81 &244450682197119595
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644024112006097299}
+  m_Enabled: 1
+--- !u!114 &5074110628732715408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644024112006097299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bbf598940c12943a92459f447aa478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathRepositionPlayer
+  XPos: 0
+  YPos: 20
+  ZPos: -30

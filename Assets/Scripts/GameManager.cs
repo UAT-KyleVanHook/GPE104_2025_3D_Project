@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     //Singleton variable
     public static GameManager instance;
 
-    //public List<DamageOnOverlap> damageZones;
+    public List<AddScore> astronautsList;
     //public int enemyCount;
 
     //player variables
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Lives")]
     public float playerLives;
+
 
     //timer variables
     //[Header("Timer")]
@@ -64,8 +67,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //Create new List to store DamageOnOVerlap's
-        //damageZones = new List<DamageOnOverlap>();
+        //Create new List to store AddScore for astronauts (I should have done this differently, next time)
+        astronautsList = new List<AddScore>();
 
         //backgroundmusic
         backgroundMusicSource.clip = backgroundMusicClip;
@@ -89,7 +92,59 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        //Debug.Log(minX);
+        Debug.Log("Astronauts alive: " + astronautsList.Count);
+
+        //check if the playerlives is zero. Player pawn is never destroyed
+        if (playerLives <= 0)
+        {
+            GameOver();
+        }
+
+        if(astronautsList.Count == 0)
+        {
+            WinGame();
+        }
+
+    }
+
+    //go to game over screen
+    void GameOver()
+    {
+
+        //check if there is a playerPref with the tag HighScore
+
+            if (score > PlayerPrefs.GetFloat("HighScore"))
+            {
+
+                //set current score to playerPrefs HighScore
+                PlayerPrefs.SetFloat("HighScore", score);
+
+            }
+        
+
+
+        SceneManager.LoadScene("GameOver");
+
+    }
+
+    //go to the win screen
+    void WinGame()
+    {
+
+        //check if there is a playerPref with the tag HighScore
+
+            if (score > PlayerPrefs.GetFloat("HighScore"))
+            {
+
+                //set current score to playerPrefs HighScore
+                PlayerPrefs.SetFloat("HighScore", score);
+
+            }
+
+
+        
+
+        SceneManager.LoadScene("WinScene");
 
     }
 }
